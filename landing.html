@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Booking</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77c7f7 3px solid;
+        }
+
+        header h1 {
+            float: left;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header nav ul {
+            padding: 0;
+            list-style: none;
+            float: right;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        header nav ul li a:hover {
+            background: #77c7f7;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: url('C:/Users/vaisa/Pictures/holiday.jpg') no-repeat center center/cover;
+            color: #fff;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #hero .btn {
+            background: #77c7f7;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        #hero .btn:hover {
+            background: #555;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 20px 0;
+            background: #f4f4f4;
+            margin-top: 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Explore the World with Us</h1>
+            <nav>
+                <ul>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#booking">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   <section id="hero">
+    <div class="container">
+        <h2>Your Dream Vacation Awaits</h2>
+        <p>Book your next holiday with us and experience unforgettable memories.</p>
+        <a href="booking.html" class="btn">Start Booking</a>
+    </div>
+</section>
+
+    <section id="destinations" class="section">
+        <div class="container">
+            <h2>Featured Destinations</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="C:/Users/vaisa/Pictures/paris.jpg" alt="Paris">
+                    <h3>Paris, France</h3>
+                    <p>The city of love awaits with its charming streets and iconic landmarks.</p>
+                </div>
+                <div class="card">
+                    <img src="C:/Users/vaisa/Pictures/maldives.jpg" alt="Maldives">
+                    <h3>Maldives</h3>
+                    <p>Relax in paradise with crystal-clear waters and pristine beaches.</p>
+                </div>
+                <div class="card">
+                    <img src="C:/Users/vaisa/Pictures/kyotoo.jpg" alt="Kyoto">
+                    <h3>Kyoto, Japan</h3>
+                    <p>Explore the rich culture and stunning temples of Kyoto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Personalized Itineraries</h3>
+                    <p>We craft customized itineraries tailored to your preferences.</p>
+                </div>
+                <div class="card">
+                    <h3>24/7 Support</h3>
+                    <p>Our team is available around the clock to assist you.</p>
+                </div>
+                <div class="card">
+                    <h3>Best Price Guarantee</h3>
+                    <p>We offer the best prices on all our packages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="section">
+        <div class="container">
+            <h2>Book Your Holiday Now</h2>
+            <p>Ready to embark on your next adventure? Contact us today to start planning.</p>
+            <a href="mailto:booking@holidaywebsite.com" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Holiday Booking. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
