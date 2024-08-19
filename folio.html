@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('images/backport.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+
+        header {
+            background: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            color: red;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 0 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .skill-card, .interest-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            width: 150px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover, .interest-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-card.red {
+            background: #ff4d4d;
+        }
+
+        .skill-card.yellow {
+            background: #ffeb3b;
+            color: black;
+        }
+
+        .skill-card.blue {
+            background: #2196f3;
+        }
+
+        .skill-card.green {
+            background: #4caf50;
+        }
+
+        .skill-card.orange {
+            background: #ff9800;
+        }
+
+        .interest-card.red {
+            background: #c62828;
+        }
+
+        .interest-card.yellow {
+            background: #fbc02d;
+            color: black;
+        }
+
+        .interest-card.blue {
+            background: #1976d2;
+        }
+
+        .interest-card.green {
+            background: #388e3c;
+        }
+
+        .interest-card.orange {
+            background: #f57c00;
+        }
+
+        .skill-card i, .interest-card i {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 0.5rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .copyright {
+            border: 1px solid #fff;
+            padding: 0.5px;
+            display: inline-block;
+            border-radius: 0.5px;
+            font-size: 0.8rem;
+        }
+
+        a {
+            color: #333;
+        }
+
+        a:hover {
+            color: #666;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            max-width: 300px;
+            margin: 1rem auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            text-align: center;
+        }
+
+        .project-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-details {
+            opacity: 0;
+            animation: fadeInUp 2s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #about-text {
+            font-size: 1rem;
+            font-weight: normal;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p id="about-text">
+            I'm an Information Technology Student from Kongu Engineering College, Perundurai. I specialize in Web Development, Networking, and Cloud Computing. I enjoy transforming complex problems into intuitive and user-friendly designs. In addition to these areas, I am also exploring Data Science, learning to analyze data to extract valuable insights and support data-driven decisions. I’m eager to apply my diverse skills in real-world projects, and I thrive in collaborative environments. Challenges that push me to grow and expand my knowledge are what I look forward to the most.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="card-container">
+            <div class="skill-card red">
+                <i class="fas fa-database"></i>
+                Data Structure
+            </div>
+            <div class="skill-card yellow">
+                <i class="fab fa-java"></i>
+                Java
+            </div>
+            <div class="skill-card blue">
+                <i class="fas fa-code"></i>
+                C
+            </div>
+            <div class="skill-card green">
+                <i class="fas fa-laptop-code"></i>
+                C++
+            </div>
+            <div class="skill-card orange">
+                <i class="fab fa-python"></i>
+                Python
+            </div>
+        </div>
+    </section>
+
+    <section id="interests">
+        <h2>Area of Interest</h2>
+        <div class="card-container">
+            <div class="interest-card red">
+                <i class="fas fa-globe"></i>
+                Web Development
+            </div>
+            <div class="interest-card yellow">
+                <i class="fas fa-network-wired"></i>
+                Networking
+            </div>
+            <div class="interest-card blue">
+                <i class="fas fa-cloud"></i>
+                Cloud Computing
+            </div>
+            <div class="interest-card green">
+                <i class="fas fa-chart-bar"></i>
+                Data Science
+            </div>
+            <div class="interest-card orange">
+                <i class="fas fa-mobile-alt"></i>
+                App Development
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card-container">
+            <div class="project-card" id="project1">
+                <img src="C:\Users\vaisa\Pictures\accidentt.png" alt="Accident Detection Motor">
+                <h3>Accident Detection Motor</h3>
+                <p>The goal of an accident detection motor system is to identify when a vehicle is involved in an accident and take appropriate actions, such as alerting emergency services, notifying vehicle occupants, or triggering safety measures.</p>
+            </div>
+            <div class="project-card" id="project2">
+                <img src="C:\Users\vaisa\Pictures\courier.jpg" alt="Courier Management System">
+                <h3>Courier Management System</h3>
+                <p>A courier management system simplifies the entire process of booking, tracking, and delivering packages. It ensures timely deliveries, minimizes errors, and improves customer satisfaction.</p>
+            </div>
+            <div class="project-card" id="project3">
+                <img src="C:\Users\vaisa\Pictures\staffmanagement.jpg" alt="Staff Publication System">
+                <h3>Staff Publication System</h3>
+                <p>A staff publication system streamlines the process of recording, managing, and publishing the academic and research output of faculty members within an educational institution.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>You can download my resume <a href="C:\Users\vaisa\Desktop\wt\ex1.resume.html">here</a>.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p class="contact-details">Email: vaisaliarjunan0207@gmail.com</p>
+        <p class="contact-details">Phone: 9944912097</p>
+        <p class="contact-details">LinkedIn: <a href="https://www.linkedin.com/in/vaisaliarjunan" target="_blank">linkedin.com/in/vaisaliarjunan</a></p>
+    </section>
+
+    <footer>
+        <p class="copyright">&copy; 2024 My Portfolio</p>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const projects = document.querySelectorAll('.project-card');
+            projects.forEach((project, index) => {
+                setTimeout(() => {
+                    project.classList.add('visible');
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
